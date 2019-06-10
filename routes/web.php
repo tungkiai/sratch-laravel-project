@@ -15,8 +15,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/user', 'UserController@index')-> name('user.index');
+Route::resource('user', 'UserController');
+
+// Route::get('/user', 'UserController@index')-> name('user.index');
+// Route::put('/user', 'UserController@edit')-> name('user.edit');
+// Route::get('/user', 'UserController@create')-> name('user.create');
 
 // Route::get('/user', function () {
 //    return view('user.index');
+// });
+
+//Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
+
+// Route::group(['middleware' => ['auth']], function () {
+    // Route::resource('role', RoleController);
+ //   Route::resource('users', UserController);
+ //   Route::resource('products', ProductController);
 // });
