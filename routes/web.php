@@ -17,6 +17,10 @@ Route::get('/', function () {
 
 Route::resource('user', 'UserController');
 
+Route::get('image-upload', 'ImageUploadController@imageUpload')->name('image.upload');
+
+Route::post('image-upload', 'ImageUploadController@imageUploadPost')->name('image.upload.post');
+
 // Route::get('/user', 'UserController@index')-> name('user.index');
 // Route::put('/user', 'UserController@edit')-> name('user.edit');
 // Route::get('/user', 'UserController@create')-> name('user.create');
